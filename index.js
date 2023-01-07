@@ -18,7 +18,6 @@ app.get("/courses", (req, res) => {
 // get category based data
 app.get("/courses/category/:id", (req, res) => {
     const id = req.params.id;
-
     const category_courses = courses.filter((n) => n.category_id === id);
     res.send(category_courses);
 });
